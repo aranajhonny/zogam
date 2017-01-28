@@ -26,7 +26,7 @@ class VehiculoController extends Controller
     public function index()
     {
 
-        $autos = DB::table('vehiculos')->orderBy('id', 'desc')->paginate(20);
+        $autos = DB::table('vehiculos')->orderBy('id', 'desc')->paginate(10);
 
         return view('dashboard', ['autos' => $autos]);
     }
