@@ -21,10 +21,10 @@ After install make sure to set mysql environment variables in your .env file.
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=8889
-DB_DATABASE=zogan
-DB_USERNAME=root	
-DB_PASSWORD=root
+DB_PORT=3306
+DB_DATABASE=zogam
+DB_USERNAME=yourusername
+DB_PASSWORD=yourpassword
 
 ```
 
