@@ -1,7 +1,7 @@
 
-# ${1:Project Name}
+# Zogam
 
-TODO: Write a project description
+ERP and CRM
 
 ## Installation
 
