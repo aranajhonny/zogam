@@ -28,8 +28,9 @@ DB_PASSWORD=yourpassword
 
 ```
 
+```
 Run php artisan serve
-
+```
 ## Contributing
 
 1. Fork it!
