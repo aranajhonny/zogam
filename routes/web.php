@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'VehiculoController@index');
+
+Route::resource('vehiculo', 'VehiculoController');
+
+Route::resource('images', 'ImagesController');
+
+Route::resource('images-rev', 'ImageRevController');
+
+Route::resource('revisiones', 'RevisionController');
