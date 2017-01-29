@@ -11,17 +11,8 @@
     <title>{{ config('app.name', 'Zogan System') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        body{
-            font-size: 16px;
-        }
-        .li-nav {
-            margin-top: 17px;
-        }
-    </style>
-    <!-- Scripts -->
+    <link href="/css/vendor/estilos.css" rel="stylesheet">
+    <link href="/css/all.css" rel="stylesheet">
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -93,6 +84,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="/js/all.js"></script>
 </body>
 </html>
