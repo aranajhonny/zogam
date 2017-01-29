@@ -19,13 +19,13 @@ class CreateVehiculosTable extends Migration
             $table->string('marca');
             $table->string('modelo');
             $table->integer('anio');
-            $table->string('serial-motor');
-            $table->string('serial-carro');
+            $table->string('serial_motor');
+            $table->string('serial_carro');
             $table->string('color');
             $table->string('tipo');
             $table->string('propietario');
-            $table->string('telf-prop');
-            $table->string('email-prop');
+            $table->string('telf_prop');
+            $table->string('email_prop');
             $table->timestamps();
         });
     }

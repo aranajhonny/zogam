@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     @if(Session::get('message'))
         <div class="alert alert-success alert-dismissable">
