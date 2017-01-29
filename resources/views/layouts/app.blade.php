@@ -34,9 +34,15 @@
                     </button>
 
                     <!-- Branding Image -->
+                    @if (Auth::guest())
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img alt="Brand" src="/img/gandocam.png" class="img-responsive" width="120px">
                     </a>
+                    @else
+                    <a class="navbar-brand" href="{{ url('/dashboard') }}">
+                        <img alt="Brand" src="/img/gandocam.png" class="img-responsive" width="120px">
+                    </a>
+                    @endif
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

@@ -90,7 +90,13 @@
 
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group @if ($errors->has('name')) has-error @endif col-md-2 col-md-offset-5">
-        <input type="submit" name="name" value="Guardar">
+      </div>
+      <div class="row">
+      <div class="col-md-12 text-center" style="margin-bottom: 50px;">
+        <input type="submit" name="name" class="btn btn-primary" value="Guardar">
+        <input type="reset" name="Restaurar" class="btn btn-danger" value="Restaurar">
+        <br>
+      </div>
       </div>
     </form>
   </div>
