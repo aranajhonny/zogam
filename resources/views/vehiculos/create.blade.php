@@ -112,11 +112,11 @@
             </div>    
           </div>     
 
-          <div class="col-md-11">
-            <div class="col-md-offset-6 col-md-4">
-              <button type="submit" class="btn btn-success" style="margin-top:20px"><span class="fa fa-save"></span> Guardar</button>
+          <div class="col-md-12 text-center">
+            <div class="col-md-offset-4 col-md-4">
+              <button type="submit" class="btn btn-success" style=""><span class="fa fa-save"></span> Guardar</button>
             </div> 
-          </div>      
+          </div>    
         </form>
       </div>
     </div>
