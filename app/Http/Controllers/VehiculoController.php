@@ -34,13 +34,42 @@ class VehiculoController extends Controller
 
     public function create()
     {
-        //
+        return view('vehiculos/create');
     }
 
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+
+      Validator::make($request->all(), [
+        'placa'=> 'required',
+        'marca' => 'required',
+        'modelo' => 'required',
+        'anio' => 'required',
+        'serial_motor' => 'required',
+        'serial_carro' => 'required',
+        'color' => 'required',
+        'tipo' => 'required',
+        'propietario' => 'required',
+        'telf_prop' => 'required',
+        'email_prop' => 'required',
+        ])->validate();
+
+      $vehiculo = new Vehiculo();
+      $vehiculo->placa = $request->placa;
+      $vehiculo->marca = $request->marca;
+      $vehiculo->modelo = $request->modelo;
+      $vehiculo->anio = $request->anio;
+      $vehiculo->serial_motor = $request->serial_motor;
+      $vehiculo->serial_carro = $request->serial_carro;
+      $vehiculo->color = $request->color;
+      $vehiculo->tipo = $request->tipo;
+      $vehiculo->propietario = $request->propietario;
+      $vehiculo->telf_prop = $request->telf_prop;
+      $vehiculo->email_prop = $request->email_prop;
+      $vehiculo->save();
+
+       return redirect('vehiculo/create')->with('message','Ha sido guardado exitosamente!');
     }
+
 
     public function edit($id)
     {
