@@ -4,16 +4,26 @@
 <div class="container">
 	<div class="row">
     @if(Session::get('message'))
-    <div class="alert alert-success alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h5> {{ Session::get('message') }}</h5>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h5> {{ Session::get('message') }}</h5>
+        </div>
+    </div>
+    @endif
+    @if(Session::get('errors'))
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h5>Complete los campos obligatorios.</h5>
+        </div>
     </div>
     @endif
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-info">
         <div class="panel-heading"><center> Registrar nuevo vehiculo</center> </div>
         <div class="panel-body">
-          <form method="post" action="http://localhost/zogan/public/vehiculo">
+          <form method="post" action="{{ url('/vehiculo') }}">
            <input type="hidden" name="_token" value="{{ csrf_token() }}">
            <div class="col-md-12"> 
 
@@ -104,7 +114,7 @@
 
           <div class="col-md-11">
             <div class="col-md-offset-6 col-md-4">
-              <button type="submit" class="btn btn-warning" style="margin-top:20px">Guardar</button>
+              <button type="submit" class="btn btn-success" style="margin-top:20px"><span class="fa fa-save"></span> Guardar</button>
             </div> 
           </div>      
         </form>

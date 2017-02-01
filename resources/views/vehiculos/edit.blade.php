@@ -19,7 +19,10 @@
         </div>
     </div>
     @endif
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-info">
+    <div class="panel-heading"><center> Editar vehiculo</center> </div>
+    <div class="panel-body">
     <center><h3>Editar vehiculo</h3></center>
     <br>
      <form class="" action=" {{ url('/vehiculo') }}/{{ $auto->id }}" method="post">
@@ -103,6 +106,8 @@
       </div>
       </div>
     </form>
+  </div>
+  </div>
   </div>
 </div>
 </div>

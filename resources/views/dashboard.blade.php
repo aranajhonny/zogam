@@ -3,9 +3,14 @@
 @section('content')
 <div class="container">
   <div class="row">
+  <div class="col-md-12">
+    <div class="text-right nuevo-veh">
+      <a href="{{ url('/vehiculo/create') }}" class="btn btn-info"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>
+    </div>
+  </div>
     <div class="col-md-12 ">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Dashboard</div>
+      <div class="panel panel-info">
+        <div class="panel-heading">/ Home</div>
         <div class="panel-body">
           <div class="container">
             <div class="table-responsive">
