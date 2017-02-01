@@ -11,8 +11,8 @@
     <title>{{ config('app.name', 'Zogan System') }}</title>
 
     <!-- Styles -->
-    <link href="/css/vendor/estilos.css" rel="stylesheet">
-    <link href="/css/all.css" rel="stylesheet">
+    <link href="{{asset('css/vendor/estilos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/all.css')}} " rel="stylesheet">
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -36,11 +36,11 @@
                     <!-- Branding Image -->
                     @if (Auth::guest())
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img alt="Brand" src="/img/gandocam.png" class="img-responsive" width="120px">
+                        <img alt="Brand" src="{{asset('img/gandocam.png')}}" class="img-responsive" width="120px">
                     </a>
                     @else
                     <a class="navbar-brand" href="{{ url('/dashboard') }}">
-                        <img alt="Brand" src="/img/gandocam.png" class="img-responsive" width="120px">
+                        <img alt="Brand" src="{{asset('img/gandocam.png')}}" class="img-responsive" width="120px">
                     </a>
                     @endif
                 </div>
@@ -90,6 +90,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/all.js"></script>
+    <script src="{{asset('js/all.js')}} "></script>
 </body>
 </html>

@@ -58,7 +58,8 @@ class VehiculoController extends Controller
 
     public function update(Request $request, $id)
     {
-       Validator::make($request->all(), [
+
+      $this->validate($request, [
         'placa'=> 'required',
         'marca' => 'required',
         'modelo' => 'required',
@@ -70,7 +71,7 @@ class VehiculoController extends Controller
         'propietario' => 'required',
         'telf_prop' => 'required',
         'email_prop' => 'required',
-        ])->validate();
+      ]);
 
       $auto = Vehiculo::find($id);
       $auto->placa = $request->placa;
