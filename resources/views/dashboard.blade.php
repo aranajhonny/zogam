@@ -35,7 +35,7 @@
                   <td>
                     <a href="{{ route('vehiculo.edit', $auto->id) }}" class="btn btn-warning btn-xs" title="Editar Registro del Vehículo"><i class="fa fa-edit"></i></a>
                     
-                    <a href="{{ route('revisiones.index', $auto->id) }}" class="btn btn-success btn-xs" title="Agregar revision al vehículo"><i class="fa fa-camera"></i>
+                    <a href="{{ url('revisiones') }}/{{ $auto->id }}" class="btn btn-success btn-xs" title="Agregar revision al vehículo"><i class="fa fa-camera"></i>
                     </a>
 
                   </td>

@@ -26,3 +26,5 @@ Route::resource('images', 'ImagesController');
 Route::resource('images-rev', 'ImageRevController');
 
 Route::resource('revisiones', 'RevisionController');
+
+Route::get('revision/{id}', 'RevisionController@index');

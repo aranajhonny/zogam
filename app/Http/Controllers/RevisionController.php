@@ -2,19 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Vehiculo;
 use App\Revision;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class RevisionController extends Controller
 {
+
+    public function __construct()
+    {
+      $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+      $auto = Vehiculo::find($id)->revisions;
+      
+      if ( !$auto ) {
+        abort(404);
+      }
+
+      return view('revision.nueva')->with('auto',$auto);
     }
 
     /**
