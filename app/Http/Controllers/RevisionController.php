@@ -21,13 +21,15 @@ class RevisionController extends Controller
      */
     public function index($id)
     {
-      $auto = Vehiculo::find($id)->revisions;
+      $auto = Vehiculo::find($id);
+
+      $rev = Vehiculo::find($id)->revisions;
       
       if ( !$auto ) {
         abort(404);
       }
 
-      return view('revision.nueva')->with('auto',$auto);
+      return view('revision.nueva', compact('auto', 'rev'));
     }
 
     /**

@@ -11,8 +11,9 @@
     <title>{{ config('app.name', 'Zogan System') }}</title>
 
     <!-- Styles -->
-    <link href="{{asset('/css/all.css')}} " rel="stylesheet">
-    <link href="{{asset('/css/vendor/estilos.css')}}" rel="stylesheet">
+    <link href="{{asset('css/all.css')}} " rel="stylesheet">
+    <link href="{{asset('css/vendor/estilos.css')}}" rel="stylesheet">
+<script src="{{asset('js/vendor/jquery.js')}} "></script>
     
     <script>
         window.Laravel = {!! json_encode([
@@ -91,6 +92,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{asset('/js/all.js')}} "></script>
+    <script src="{{asset('js/all.js')}} "></script>
 </body>
 </html>

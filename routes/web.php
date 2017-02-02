@@ -28,3 +28,5 @@ Route::resource('images-rev', 'ImageRevController');
 Route::resource('revisiones', 'RevisionController');
 
 Route::get('revision/{id}', 'RevisionController@index');
+
+Route::post('upload', 'UploadController@upload');
