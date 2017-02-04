@@ -21,15 +21,30 @@ class RevisionController extends Controller
      */
     public function index($id)
     {
+      $tiposRev = array('desarmado','latoneria','pintura','pulitura','armado');
       $auto = Vehiculo::find($id);
 
-      $rev = Vehiculo::find($id)->revisions;
-      
       if ( !$auto ) {
         abort(404);
       }
 
-      return view('revision.nueva', compact('auto', 'rev'));
+      $revs = Vehiculo::find($id)->revisions;
+
+      foreach ($revs as $rev) {
+        if ($rev->tipo == 'desarmado') {
+          $tiposRev = array_except($tiposRev, [0]);
+        }elseif ($rev->tipo == 'latoneria') {
+          $tiposRev = array_except($tiposRev, [1]);
+        }elseif ($rev->tipo == 'pintura') {
+          $tiposRev = array_except($tiposRev, [2]);
+        }elseif ($rev->tipo == 'pulitura') {
+          $tiposRev = array_except($tiposRev, [3]);
+        }elseif ($rev->tipo == 'armado') {
+          $tiposRev = array_except($tiposRev, [4]);
+        }
+      }
+
+      return view('revision.nueva', compact('auto', 'revs', 'tiposRev'));
     }
 
     /**

@@ -1,34 +1,74 @@
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid">
-<h2>Subir Fotos</h2>
-<form enctype="multipart/form-data">
+<form enctype="multipart/form-data" action="{{ url('/upload')}}" method="post">
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
+<div class="container-fluid">
+  <h2></h2>
   <div class="row">
-  <div class="col-md-12">
-      <div class="col-md-10 col-md-offset-1">
-      <div class="form-group">
-      <input id="images-input" name="images[]" type="file" multiple data-preview-file-type="any" class="file">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">/ Datos del vehiculo</div>
+        <div class="panel-body">
+          <div class="row">
+          <input type="hidden" value="{{ strtoupper($auto->id) }}" name="_idAuto">
+            <div class="col-md-6"><p><strong>Placa:</strong> {{ strtoupper($auto->placa) }}</p></div>
+            <div class="col-md-6"><p><strong>Dueño:</strong> {{ strtoupper($auto->propietario) }}</p></div>
+            <div class="col-md-6"><p><strong>Marca:</strong> {{ strtoupper($auto->marca) }}</p></div>
+            <div class="col-md-6"><p><strong>Modelo:</strong> {{ strtoupper($auto->modelo) }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">/ Subir Fotos</div>
+        <div class="panel-body">
+          <div class="col-md-6">
+            <div class="form-group">
+            <label for="sel1"><p>Selecione la etapa del proceso.</p></label>
+              <select class="form-control" id="sel1" name="_tipoRev">
+                <option></option>
+                @foreach ($tiposRev as $tipo)
+                  <option value="{{ $tipo }}">{{ $tipo }}</option>
+                @endforeach
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+            <label for="sel1"><p>Selecione la fecha en que se realiz&oacute</p></label><br>
+            <input type="date" name="_fechaRev">
+            </div>
+          </div>
+          <div class="col-md-12 ">
+            <div class="form-group image">
+              <input id="images-input" name="images[]" type="file" multiple data-preview-file-type="any" class="file">
+            </div>
+          </div>
+          <center>
+          <div class="col-md-12 text-center">
+          <br>
+          <br>
+              <button class="btn btn-success" type="submit"><span class="fa fa-send"></span> Guardar</button>
+              <button class="btn btn-warning" onclick="javascript: window.history.back()"><span class="fa fa-arrow-left"></span> Volver</button>
+            <br>
+          <br>
+          </div>
+          </center>
+        </div>
       </div>
     </div>
   </div>
-
 </form>
 
-
 <script type="text/javascript">
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-$("#images-input").fileinput({
-    language: "es",
-    uploadUrl: "{{ url('/upload')}}", // server upload action
-    uploadAsync: true,
-    allowedFileExtensions: ["jpg", "png"],
-    maxFileCount: 5
-});
+    $("#images-input").fileinput({
+        language: "es",
+        uploadUrl: '/file-upload-batch/2',
+        maxFileCount: 5,
+        allowedFileExtensions: ["jpg", "png"]
+    });
+
 </script>
 </div>  
 @endsection

@@ -16,3 +16,8 @@ body{
 .nuevo-veh {
     margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  ..btn-warning {
+   margin-left: 100px;
+  }
+}
