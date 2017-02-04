@@ -13,11 +13,22 @@ class UploadController extends Controller
 {
     //
 
-    public function upload(Request $request){
-      $file = $request->file('images');
-      $fileName = $file->getClientOriginalName();
-      $request->file('images')->move("image/",$fileName);
+  public function upload(Request $request)
+  {
+    $picture = '';
 
-      return \Response::json(array('success' => true));
+    if ($request->hasFile('images')) {
+      $files = $request->file('images');
+
+      foreach($files as $file){
+        $randomName = str_random(5);
+        $imageName = $randomName.'.'.$file->getClientOriginalExtension();
+        $file->move(public_path('images'), $imageName);
+        
+      }
     }
-}
+      return response()->json(['success'=>'true']);
+  }
+  
+
+  }
