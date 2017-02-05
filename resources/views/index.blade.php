@@ -55,42 +55,42 @@ function buscar() {
           $("#head-rev").addClass('head-rev');
           $('.head-rev').append('<span>Revisi&oacuten</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-rev').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-rev').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       } else if (image.tipo == 'desarmado') {
         $("#panel-des").removeClass('hidden');
         if (!$("#head-des").hasClass('head-des')) {
           $("#head-des").addClass('head-des');
           $('.head-des').append('<span>Desarmado</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-des').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-des').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       } else if (image.tipo == 'latoneria') {
         $("#panel-lat").removeClass('hidden');
         if (!$("#head-lat").hasClass('head-lat')) {
           $("#head-lat").addClass('head-lat');
           $('.head-lat').append('<span>Latoneria</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-lat').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-lat').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       } else if (image.tipo == 'pintura') {
         $("#panel-pint").removeClass('hidden');
         if (!$("#head-pint").hasClass('head-pint')) {
           $("#head-pint").addClass('head-pint');
           $('.head-pint').append('<span>Pintura</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-pint').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-pint').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       } else if (image.tipo == 'pulitura') {
         $("#panel-puli").removeClass('hidden');
         if (!$("#head-puli").hasClass('head-puli')) {
           $("#head-puli").addClass('head-puli');
           $('.head-puli').append('<span>Pulitura</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-puli').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-puli').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       } else if (image.tipo == 'armado') {
         $("#panel-arma").removeClass('hidden');
         if (!$("#head-arma").hasClass('head-arma')) {
           $("#head-arma").addClass('head-arma');
           $('.head-arma').append('<span>Armado</span> / <span>' + image.fecha + '</span>');
         }
-        $('.panel-arma').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
+        $('.panel-arma').append(' \n          <div class="col-md-4">\n                <div class="thumbnail"> \n                  <img data-action="zoom" src="images/' + image.nombre + '" alt="Lights" style="width:300px">\n                </div>\n              </div>');
       }
     });
   });
