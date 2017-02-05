@@ -69,7 +69,7 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('webmaster@gandocam.com.ve', '$2y$10$LwAxzXOzw3C0O5at4gHeXOsarPBqTcceOPaMbOJ7P4kny50Q4kpe6', '2017-02-05 20:13:37');
+('admin@gandocam.com.ve', '$2y$10$LwAxzXOzw3C0O5at4gHeXOsarPBqTcceOPaMbOJ7P4kny50Q4kpe6', '2017-02-05 20:13:37');
 
 -- --------------------------------------------------------
 
