@@ -21,7 +21,8 @@ class RevisionController extends Controller
      */
     public function index($id)
     {
-      $tiposRev = array('desarmado','latoneria','pintura','pulitura','armado');
+      $tiposRev = array('revision','desarmado','latoneria','pintura','pulitura','armado');
+
       $auto = Vehiculo::find($id);
 
       if ( !$auto ) {
@@ -32,15 +33,17 @@ class RevisionController extends Controller
 
       foreach ($revs as $rev) {
         if ($rev->tipo == 'desarmado') {
-          $tiposRev = array_except($tiposRev, [0]);
-        }elseif ($rev->tipo == 'latoneria') {
           $tiposRev = array_except($tiposRev, [1]);
-        }elseif ($rev->tipo == 'pintura') {
+        }elseif ($rev->tipo == 'latoneria') {
           $tiposRev = array_except($tiposRev, [2]);
-        }elseif ($rev->tipo == 'pulitura') {
+        }elseif ($rev->tipo == 'pintura') {
           $tiposRev = array_except($tiposRev, [3]);
-        }elseif ($rev->tipo == 'armado') {
+        }elseif ($rev->tipo == 'pulitura') {
           $tiposRev = array_except($tiposRev, [4]);
+        }elseif ($rev->tipo == 'armado') {
+          $tiposRev = array_except($tiposRev, [5]);
+        }elseif ($rev->tipo == 'revision') {
+          $tiposRev = array_except($tiposRev, [0]);
         }
       }
 

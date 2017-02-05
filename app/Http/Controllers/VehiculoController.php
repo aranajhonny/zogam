@@ -34,8 +34,9 @@ class VehiculoController extends Controller
 
     public function create()
     {
-        return view('vehiculos/create');
+      return view('vehiculos/create');
     }
+
 
     public function store(Request $request){
 
@@ -65,9 +66,10 @@ class VehiculoController extends Controller
       $vehiculo->propietario = $request->propietario;
       $vehiculo->telf_prop = $request->telf_prop;
       $vehiculo->email_prop = $request->email_prop;
+      $vehiculo->status = 'Ninguno';
       $vehiculo->save();
 
-       return redirect('vehiculo/create')->with('message','Ha sido guardado exitosamente!');
+      return redirect('vehiculo/create')->with('message','Ha sido guardado exitosamente!');
     }
 
 
@@ -100,7 +102,7 @@ class VehiculoController extends Controller
         'propietario' => 'required',
         'telf_prop' => 'required',
         'email_prop' => 'required',
-      ]);
+        ]);
 
       $auto = Vehiculo::find($id);
       $auto->placa = $request->placa;

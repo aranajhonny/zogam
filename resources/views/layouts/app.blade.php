@@ -16,13 +16,15 @@
 
   <link href="{{asset('css/vendor/estilos.css')}}" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{asset('css/alert.css')}}" as script>
+  <link rel="stylesheet" href="{{asset('css/alert.css')}}" >
+  <link rel="stylesheet" href="{{asset('css/nprogress.css')}}" >
 
   <script  src="{{asset('js/vendor/jquery.js')}} "></script>
   <script  src="{{asset('js/all.js')}} "></script>
   <script  src="{{asset('fileinput/js/fileinput.js')}} " type="text/javascript"></script>
   <script  src="{{asset('fileinput/js/locales/es.js')}} " type="text/javascript"></script>
   <script  src="{{asset('js/alert.js')}} " type="text/javascript"></script>
+  <script  src="{{asset('js/nprogress.js')}} " type="text/javascript"></script>
   
   <script src=""></script>
   <script>
@@ -51,7 +53,7 @@
               <img alt="Brand" src="{{asset('/img/gandocam.png')}}" class="img-responsive" width="120px">
             </a>
             @else
-            <a class="navbar-brand" href="{{ url('/dashboard') }}">
+            <a class="navbar-brand" href="{{ url('/') }}">
               <img alt="Brand" src="{{asset('/img/gandocam.png')}}" class="img-responsive" width="120px">
             </a>
             @endif

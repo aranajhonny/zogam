@@ -3,6 +3,14 @@
 <form enctype="multipart/form-data" action="{{ url('/upload')}}" method="post">
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
 <div class="container-fluid">
+    @if(Session::get('message'))
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h5> {{ Session::get('message') }}</h5>
+        </div>
+    </div>
+    @endif
   <h2></h2>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -26,7 +34,7 @@
           <div class="col-md-6">
             <div class="form-group">
             <label for="sel1"><p>Selecione la etapa del proceso.</p></label>
-              <select class="form-control" id="sel1" name="_tipoRev">
+              <select class="form-control" id="sel1" name="_tipoRev" required="true">
                 <option></option>
                 @foreach ($tiposRev as $tipo)
                   <option value="{{ $tipo }}">{{ $tipo }}</option>
@@ -37,12 +45,12 @@
           <div class="col-md-6">
             <div class="form-group">
             <label for="sel1"><p>Selecione la fecha en que se realiz&oacute</p></label><br>
-            <input type="date" name="_fechaRev">
+            <input type="date" name="_fechaRev" required="true">
             </div>
           </div>
           <div class="col-md-12 ">
             <div class="form-group image">
-              <input id="images-input" name="images[]" type="file" multiple data-preview-file-type="any" class="file">
+              <input id="images-input" name="images[]" type="file" multiple data-preview-file-type="any" class="file" required="true">
             </div>
           </div>
           <center>

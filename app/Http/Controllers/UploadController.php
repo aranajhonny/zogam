@@ -8,17 +8,66 @@ use Storage;
 use App\Images;
 use App\Revision; 
 use App\Image_rev;
+use App\Vehiculo;
 
+
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
 {
 
+    public function mivehiculo($placa)
+    {
+      return view('vehiculos/create');
+    }
 
+    public function getImages($placa)
+    {
+      $auto = Vehiculo::where('placa', $placa)->first();
+
+      if (!$auto) {
+        $msj = array('status' => 'error');
+        return $msj;
+      }
+
+      $results = DB::select('SELECT id  FROM revisions WHERE vehiculo_id  = :id', ['id' => $auto->id]);
+
+      $array = array();
+      foreach ($results as $value) {
+        $images = DB::select('
+              SELECT i.image_id, r.tipo,r.fecha, images.nombre 
+              FROM image_revs as i 
+              inner JOIN revisions as r 
+              ON i.revision_id = r.id 
+              INNER JOIN images 
+              ON i.image_id = images.id 
+              WHERE revision_id = :id', ['id' => $value->id]);
+        $array = array_merge($array, $images);
+      }
+
+        // SELECT id FROM revisions WHERE vehiculo_id = 1
+
+        // SELECT image_id FROM image_revs WHERE revision_id = 1
+
+        // SELECT nombre FROM images WHERE id = 10
+
+      return $array;
+
+    }
   public function upload(Request $request)
   {
    $rev = new Revision();  
+   $auto = new Vehiculo();
+   $idAuto = $request->_idAuto;
+   $auto = Vehiculo::find($idAuto);
+   if ($request->_tipoRev == "armado") {
+     $auto->status = "completo";
+   } else {
+     $auto->status = $request->_tipoRev;
+   }
+   $auto->save();
 
    $rev->vehiculo_id = $request->_idAuto;
    $rev->tipo = $request->_tipoRev;
@@ -45,8 +94,7 @@ class UploadController extends Controller
       $file->move(public_path('images'), $imageName);
     }
   }
-
-  return response()->json($request);
+  return redirect('revision/'. $request->_idAuto )->with('message','Ha sido guardado exitosamente!');
 }
 
 
