@@ -64,6 +64,7 @@ $( document ).ready(function() {
   $('.panel-nuevo').empty();
 });
 function buscar() {
+  $('.panel-nuevo').remove();
   $('.buscar-panel').append(template)
   NProgress.configure({ easing: 'ease', speed: 200, showSpinner: false });
   NProgress.start();

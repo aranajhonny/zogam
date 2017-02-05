@@ -28,9 +28,11 @@
 
 var template = '\n  <div id="panel-rev" class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading " id="head-rev"></div>\n        <div class="panel-body panel-rev">\n\n        </div>\n      </div>\n    </div>\n  </div>\n   <div id="panel-des" class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading " id="head-des"></div>\n        <div class="panel-body panel-des">\n\n        </div>\n      </div>\n    </div>\n  </div>\n     <div id="panel-lat" class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading " id="head-lat"></div>\n        <div class="panel-body panel-lat">\n\n        </div>\n      </div>\n    </div>\n  </div>\n     <div id="panel-pint" class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading" id="head-pint"></div>\n        <div class="panel-body panel-pint">\n\n        </div>\n      </div>\n    </div>\n  </div>\n     <div id="panel-puli" class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading" id="head-puli"></div>\n        <div class="panel-body panel-puli">\n\n        </div>\n      </div>\n    </div>\n  </div>\n     <div id="panel-arma"  class="row panel-nuevo hidden">\n    <div class="col-md-12 ">\n      <div class="panel panel-info">\n        <div class="panel-heading" id="head-arma"></div>\n        <div class="panel-body panel-arma">\n\n        </div>\n      </div>\n    </div>\n  </div>\n';
 $(document).ready(function () {
-  $('.panel-nuevo').empty();
+  $('.panel-nuevo').remove();
 });
 function buscar() {
+  $('.panel-nuevo').remove();
+  
   $('.buscar-panel').append(template);
   NProgress.configure({ easing: 'ease', speed: 200, showSpinner: false });
   NProgress.start();
