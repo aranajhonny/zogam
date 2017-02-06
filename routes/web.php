@@ -4,7 +4,7 @@ Auth::routes();
 
 Route::get('/home', 'VehiculoController@index');
 
-Route::get('/', function(){
+Route::get('/auto', function(){
   return view('index');
 });
 
