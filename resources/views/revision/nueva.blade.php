@@ -11,8 +11,7 @@
         </div>
     </div>
     @endif
-  <h2></h2>
-  <a href="{{ url('/home') }}" style="float:right; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  LISTADO</span></a><br><br>      
+  <h2></h2>    
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-info">
@@ -59,6 +58,8 @@
           <br>
           <br>
               <button class="btn btn-success" type="submit"><span class="fa fa-send"></span> Guardar</button>
+              <button class="btn btn-warning" onclick="javascript: window.history.back()"><span class="fa fa-arrow-left"></span> Volver</button>
+
             <br>
           <br>
           </div>
