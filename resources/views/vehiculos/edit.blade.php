@@ -19,12 +19,11 @@
         </div>
     </div>
     @endif
+    <a href="{{ url('/home') }}" style="float:right; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  LISTADO</span></a>    
     <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-info">
     <div class="panel-heading"><center> Editar vehiculo</center> </div>
     <div class="panel-body">
-    <center><h3>Editar vehiculo</h3></center>
-    <br>
      <form class="" action=" {{ url('/vehiculo') }}/{{ $auto->id }}" method="post">
 
       <div class="form-group @if ($errors->has('placa')) has-error @endif col-md-6">
