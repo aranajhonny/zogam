@@ -21,7 +21,7 @@
     @endif
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-info">
-        <div class="panel-heading"><center> Registrar nuevo vehiculo</center> </div>
+        <div class="panel-heading"><center> Registrar Nuevo Vehículo</center> </div>
         <div class="panel-body">
           <form method="post" action="{{ url('/vehiculo') }}">
            <input type="hidden" name="_token" value="{{ csrf_token() }}">

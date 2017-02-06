@@ -29,6 +29,8 @@ DB_PASSWORD=yourpassword
 ```
 
 ```
+Run php artisan key:generate
+
 Run php artisan serve
 ```
 ## Contributing
