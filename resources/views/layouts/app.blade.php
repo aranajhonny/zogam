@@ -69,11 +69,8 @@
             <ul class="nav navbar-nav navbar-right">
               <!-- Authentication Links -->
               @if (Auth::guest())
-              <li class="li-nav"><a href="http://gandocam.com.ve">Sitio principal</a></li>
-              <li class="li-nav"><a href="http://gandocam.com.ve/servicios/">Servicios</a></li>
-              <li class="li-nav"><a href="http://gandocam.com.ve/contactanos/">Contáctanos</a></li>
-              <li class="li-nav"><a href="{{ url('/login') }}">Entrar</a></li>
-              <!-- <li><a href="{{ url('/register') }}">Registrarse</a></li> -->
+              <li class="li-nav"><a href="{{ url('/login') }}">Entrar</a></li> 
+              <!-- <li><a href="{{ url('/register') }}">Registrarse</a></li> --> 
               @else
               <li class="dropdown li-nav">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

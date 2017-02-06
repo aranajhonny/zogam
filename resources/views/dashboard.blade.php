@@ -5,17 +5,17 @@
   <div class="row">
   <div class="col-md-12">
     <div class="text-right nuevo-veh">
-      <a href="{{ url('/vehiculo/create') }}" class="btn btn-info"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>
+      <a href="{{ url('/vehiculo/create') }}" class="btn btn-primary"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>
     </div>
   </div>
     <div class="col-md-12 ">
       <div class="panel panel-info">
-        <div class="panel-heading">/ Home</div>
+        <div class="panel-heading">Home</div>
         <div class="panel-body">
           <div class="container">
             <div class="table-responsive">
               <table class="table"> 
-               <caption>Vehiculos registrados</caption> 
+               <caption>Vehículos Registrados</caption> 
                <thead> 
                  <tr> 
                    <th>#</th> 
