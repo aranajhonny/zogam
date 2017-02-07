@@ -5,7 +5,7 @@
   <div class="row">
   <div class="col-md-12">
     <div class="text-right nuevo-veh">
-      <a href="{{ url('/vehiculo/create') }}" class="btn btn-primary"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>
+      <a href="{{ url('/vehiculo/create') }}" class="btn btn-info"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>
     </div>
   </div>
     <div class="col-md-12 ">
