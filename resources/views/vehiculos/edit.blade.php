@@ -123,7 +123,6 @@
       <div class="row">
       <div class="col-md-12 text-center" style="margin-bottom: 50px;">
         <button type="submit" name="name" class="btn btn-success"><span class="fa fa-save"></span> Guardar</button>
-        <button type="reset" name="Restaurar" class="btn btn-danger" ><span class="fa fa-refresh"></span> Restaurar</button>
         <br>
       </div>
       </div>

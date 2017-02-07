@@ -115,7 +115,6 @@
           <div class="col-md-12 text-center">
             <div class="col-md-offset-4 col-md-4">
               <button type="submit" class="btn btn-success" style=""><span class="fa fa-save"></span> Guardar</button>
-              <button class="btn btn-danger" onclick="javascript: window.history.back()"><span class="fa fa-arrow-left"></span> Volver</button>
             </div> 
           </div>    
         </form>
