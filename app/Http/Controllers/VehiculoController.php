@@ -107,7 +107,7 @@ class VehiculoController extends Controller
         'tipo' => 'required',
         'propietario' => 'required',
         'telf_prop' => 'required',
-        'email_prop' => 'required|email',
+        'email_prop' => 'required',
         ]);
 
       $auto = Vehiculo::find($id);

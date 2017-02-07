@@ -108,7 +108,7 @@
           <div class="col-md-offset-1 col-md-4">     
           <div class="form-group @if ($errors->has('email_prop')) has-error @endif">
             <label for="">Correo electronico</label>
-            <input required="true" type="text" class="form-control" name="email_prop" value="{{ $auto->email_prop }}" placeholder="email propietario">
+            <input required="true"  class="form-control" name="email_prop" value="{{ $auto->email_prop }}" placeholder="email propietario">
             @if ($errors->has('email_prop')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    
