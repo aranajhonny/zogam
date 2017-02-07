@@ -81,11 +81,7 @@
              <div class="col-md-offset-1 col-md-4">     
               <div class="form-group @if ($errors->has('tipo')) has-error @endif">                
                 <label>Tipo</label>
-                <select class="form-control" name="tipo" placeholder="Ligero">
-                  <option></option>
-                  <option value="Ligero">Ligero</option>
-                  <option value="Carga">Carga</option>
-                </select>
+                <input required="true" type="text" class="form-control" name="tipo" value="" placeholder="tipo">
                 @if ($errors->has('tipo')) <p class="help-block"> Este campo es requerido.</p> @endif 
               </div>              
               </div>          

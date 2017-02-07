@@ -52,7 +52,7 @@
           <div class="col-md-offset-1 col-md-4">     
           <div class="form-group @if ($errors->has('anio')) has-error @endif">
             <label for="">Año</label>
-             <input type="number" class="form-control" name="anio" value="{{ $auto->anio }}" placeholder="año" required="true">placeholder="año">
+             <input type="number" class="form-control" name="anio" value="{{ $auto->anio }}" placeholder="año" required="true" placeholder="año">
             @if ($errors->has('anio')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    
@@ -69,7 +69,7 @@
           <div class="form-group @if ($errors->has('serial_carro')) has-error @endif">
             <label for="">Serial de la carroceria</label>
             <input required="true" type="text" class="form-control" name="serial_carro" value="{{ $auto->serial_carro }}" placeholder="serial carro">
-            @if ($errors->has('serial_carro')) <p class="help-block"> {Este campo es requerido.</p> @endif <br>
+            @if ($errors->has('serial_carro')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    
 
