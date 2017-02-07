@@ -92,7 +92,7 @@
           <div class="col-md-offset-1 col-md-4">     
           <div class="form-group @if ($errors->has('propietario')) has-error @endif">
             <label for="">Propietario</label>
-            <input required="true" type="text" class="form-control" name="propietario" value="{{ $auto->propietario }}" placeholder="propietario">
+            <input required="true" type="text" title="SOLO LETRAS" placeholder="Nombre y/o Apellidos" class="form-control" name="propietario" value="{{ $auto->propietario }}" placeholder="propietario">
             @if ($errors->has('propietario')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    
@@ -100,7 +100,7 @@
           <div class="col-md-offset-1 col-md-4">     
           <div class="form-group @if ($errors->has('telf_prop')) has-error @endif">
           <label for="telefono">Tel&eacutefono</label>
-            <input required="true" type="text" class="form-control" name="telf_prop" value="{{ $auto->telf_prop }}" placeholder="telefono propietario">
+            <input required="true" type="text" title="0244-9999999"  pattern="^([0-9]{4})-([0-9]{7})$" class="form-control" name="telf_prop" value="{{ $auto->telf_prop }}" placeholder="0244-9999999">
             @if ($errors->has('telf_prop')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    
