@@ -10,12 +10,12 @@
   </div>
     <div class="col-md-12 ">
       <div class="panel panel-info">
-        <div class="panel-heading">/ Home</div>
+        <div class="panel-heading">Home</div>
         <div class="panel-body">
           <div class="container">
             <div class="table-responsive">
               <table class="table"> 
-               <caption>Vehiculos registrados</caption> 
+               <caption>Vehículos Registrados</caption> 
                <thead> 
                  <tr> 
                    <th>#</th> 
@@ -35,12 +35,12 @@
                   <td>{{ strtoupper($auto->propietario) }}</td>
                   <td>{{ strtoupper($auto->status) }}</td>
                   <td>
-                    <a href="{{ route('vehiculo.edit', $auto->id) }}" class="btn btn-warning btn-xs" title="Editar Registro del Vehículo"><i class="fa fa-edit"></i></a>
+                    <a href="{{ route('vehiculo.edit', $auto->id) }}" class="btn btn-warning btn-xs" title="Editar Registro del Vehículo"><i class="fa fa-edit fa-lg"></i></a>
                     @if ($auto->status == "completo")
                       <a class="btn btn-success btn-xs" title="Agregar revision al vehículo"><i class="fa fa-camera"></i>
                     </a>
                     @else
-                    <a href="{{ url('revision') }}/{{ $auto->id }}" class="btn btn-success btn-xs" title="Agregar revision al vehículo"><i class="fa fa-camera"></i>
+                    <a href="{{ url('revision') }}/{{ $auto->id }}" class="btn btn-success btn-xs" title="Agregar revision al vehículo"><i class="fa fa-camera fa-lg"></i>
                     </a>
                     @endif
 

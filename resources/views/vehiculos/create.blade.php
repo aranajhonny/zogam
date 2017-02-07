@@ -19,14 +19,14 @@
         </div>
     </div>
     @endif
+    <a href="{{ url('/home') }}" style="float:right; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  LISTADO</span></a><br><br>
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-info">
-        <div class="panel-heading"><center> Registrar nuevo vehiculo</center> </div>
+        <div class="panel-heading"><center>Registrar Nuevo Vehículo</center> </div>
         <div class="panel-body">
           <form method="post" action="{{ url('/vehiculo') }}">
            <input type="hidden" name="_token" value="{{ csrf_token() }}">
            <div class="col-md-12"> 
-
              <div class="col-md-offset-1 col-md-4">   
               <div class="form-group @if ($errors->has('placa')) has-error @endif">                
                 <label>Matrícula</label>
@@ -115,7 +115,6 @@
           <div class="col-md-12 text-center">
             <div class="col-md-offset-4 col-md-4">
               <button type="submit" class="btn btn-success" style=""><span class="fa fa-save"></span> Guardar</button>
-              <button class="btn btn-warning" onclick="javascript: window.history.back()"><span class="fa fa-arrow-left"></span> Volver</button>
             </div> 
           </div>    
         </form>
