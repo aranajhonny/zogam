@@ -52,7 +52,7 @@
              <div class="col-md-offset-1 col-md-4">  
               <div class="form-group @if ($errors->has('anio')) has-error @endif">                
                 <label>Año</label>
-                <input type="text" placeholder="2015" maxlength="4" size="4" class="form-control" name="anio">
+                <input type="number" placeholder="2015" min="1" max="4" class="form-control" name="anio">
                 @if ($errors->has('anio')) <p class="help-block"> Este campo es requerido.</p> @endif  
               </div>              
                </div>          

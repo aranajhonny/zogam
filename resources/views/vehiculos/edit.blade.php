@@ -53,7 +53,7 @@
           <div class="col-md-offset-1 col-md-4">     
           <div class="form-group @if ($errors->has('anio')) has-error @endif">
             <label for="">Año</label>
-            <input type="text" class="form-control" maxlength="4" name="anio" value="{{ $auto->anio }}" placeholder="año">
+            <input type="number" class="form-control" maxlength="4" name="anio" value="{{ $auto->anio }}" placeholder="año">
             @if ($errors->has('anio')) <p class="help-block"> Este campo es requerido.</p> @endif <br>
           </div>
       </div>    

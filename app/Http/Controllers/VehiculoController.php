@@ -41,10 +41,10 @@ class VehiculoController extends Controller
     public function store(Request $request){
 
       Validator::make($request->all(), [
-        'placa'=> 'required|max:6',
+        'placa'=> 'required|max:6|regex:/(^[A-Za-z0-9 ]+$)+/',
         'marca' => 'required',
         'modelo' => 'required',
-        'anio' => 'required|max:4|',
+        'anio' => 'required|max:4|integer|between:1,4|numeric|min:4',
         'serial_motor' => 'required',
         'serial_carro' => 'required',
         'color' => 'required',
@@ -91,10 +91,10 @@ class VehiculoController extends Controller
     {
 
       $this->validate($request, [
-        'placa'=> 'required|max:6',
+        'placa'=> 'required|max:6|regex:/(^[A-Za-z0-9 ]+$)+/',
         'marca' => 'required',
         'modelo' => 'required',
-        'anio' => 'required|max:4|size:4',
+        'anio' => 'required|max:4|integer|between:1,4|numeric|min:4',
         'serial_motor' => 'required',
         'serial_carro' => 'required',
         'color' => 'required',
