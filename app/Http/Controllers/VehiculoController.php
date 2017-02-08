@@ -39,19 +39,25 @@ class VehiculoController extends Controller
 
 
     public function store(Request $request){
+      $auto = Vehiculo::where('placa', $request->placa)->first();
+
+      if ($auto) {
+        return redirect('vehiculo/create')
+        ->with('status', 'El vehiculo ya se encuentra registrado!');
+      }
 
       Validator::make($request->all(), [
-        'placa'=> 'required|max:6|regex:/(^[A-Za-z0-9 ]+$)+/',
+        'placa'=> 'required',
         'marca' => 'required',
         'modelo' => 'required',
-        'anio' => 'required|max:4|integer|between:1,4|numeric|min:4',
+        'anio' => 'required',
         'serial_motor' => 'required',
         'serial_carro' => 'required',
         'color' => 'required',
         'tipo' => 'required',
         'propietario' => 'required',
         'telf_prop' => 'required',
-        'email_prop' => 'required|email|', 
+        'email_prop' => 'required',
         ])->validate();
 
       $vehiculo = new Vehiculo();
@@ -91,17 +97,17 @@ class VehiculoController extends Controller
     {
 
       $this->validate($request, [
-        'placa'=> 'required|max:6|regex:/(^[A-Za-z0-9 ]+$)+/',
+        'placa'=> 'required',
         'marca' => 'required',
         'modelo' => 'required',
-        'anio' => 'required|max:4|integer|between:1,4|numeric|min:4',
+        'anio' => 'required',
         'serial_motor' => 'required',
         'serial_carro' => 'required',
         'color' => 'required',
         'tipo' => 'required',
         'propietario' => 'required',
         'telf_prop' => 'required',
-        'email_prop' => 'required',
+        'email_prop' => 'required|email',
         ]);
 
       $auto = Vehiculo::find($id);
