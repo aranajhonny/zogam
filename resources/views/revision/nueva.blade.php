@@ -74,7 +74,7 @@
     $("#images-input").fileinput({
         language: "es",
         uploadUrl: '/file-upload-batch/2',
-        maxFileCount: 5,
+        maxFileCount: 8,
         allowedFileExtensions: ["jpg", "png"]
     });
 
