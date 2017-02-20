@@ -21,7 +21,7 @@ class RevisionController extends Controller
      */
     public function index($id)
     {
-      $tiposRev = array('revision','desarmado','latoneria','pintura','pulitura','armado');
+      $tiposRev = array('recepcion','desarmado','latoneria','preparacion','pintura','pulitura','limpieza');
 
       $auto = Vehiculo::find($id);
 
@@ -34,15 +34,23 @@ class RevisionController extends Controller
       foreach ($revs as $rev) {
         if ($rev->tipo == 'desarmado') {
           $tiposRev = array_except($tiposRev, [1]);
-        }elseif ($rev->tipo == 'latoneria') {
+        }
+        elseif ($rev->tipo == 'latoneria') {
           $tiposRev = array_except($tiposRev, [2]);
-        }elseif ($rev->tipo == 'pintura') {
-          $tiposRev = array_except($tiposRev, [3]);
-        }elseif ($rev->tipo == 'pulitura') {
+        }
+        elseif ($rev->tipo == 'pintura') {
           $tiposRev = array_except($tiposRev, [4]);
-        }elseif ($rev->tipo == 'armado') {
+        }
+        elseif ($rev->tipo == 'preparacion') {
+          $tiposRev = array_except($tiposRev, [3]);
+        }
+        elseif ($rev->tipo == 'pulitura') {
           $tiposRev = array_except($tiposRev, [5]);
-        }elseif ($rev->tipo == 'revision') {
+        }
+        elseif ($rev->tipo == 'limpieza') {
+          $tiposRev = array_except($tiposRev, [6]);
+        }
+        elseif ($rev->tipo == 'recepcion') {
           $tiposRev = array_except($tiposRev, [0]);
         }
       }
