@@ -45,7 +45,7 @@
           <div class="col-md-6">
             <div class="form-group">
             <label for="sel1"><p>Selecione la fecha en que se realiz&oacute</p></label><br>
-            <input type="date" name="_fechaRev" required="true">
+            <input type="date" name="_fechaRev" required="true" value="<?php echo date('Y-m-d'); ?>">
             </div>
           </div>
           <div class="col-md-12 ">
