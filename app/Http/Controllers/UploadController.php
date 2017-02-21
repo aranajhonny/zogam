@@ -53,7 +53,7 @@ class UploadController extends Controller
 
         // SELECT nombre FROM images WHERE id = 10
 
-      return $array;
+      return array('data'=>$array,'auto'=>$auto);
 
     }
   public function upload(Request $request)
