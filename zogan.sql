@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 05-02-2017 a las 22:29:38
+-- Tiempo de generación: 20-02-2017 a las 22:14:36
 -- Versión del servidor: 5.6.34
 -- Versión de PHP: 7.1.0
 
@@ -69,7 +69,7 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('admin@gandocam.com.ve', '$2y$10$LwAxzXOzw3C0O5at4gHeXOsarPBqTcceOPaMbOJ7P4kny50Q4kpe6', '2017-02-05 20:13:37');
+('webmaster@gandocam.com.ve', '$2y$10$LwAxzXOzw3C0O5at4gHeXOsarPBqTcceOPaMbOJ7P4kny50Q4kpe6', '2017-02-05 20:13:37');
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,7 @@ INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
 CREATE TABLE `revisions` (
   `id` int(10) UNSIGNED NOT NULL,
   `vehiculo_id` int(10) UNSIGNED NOT NULL,
-  `tipo` enum('desarmado','latoneria','pintura','pulitura','armado','revision') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tipo` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fecha` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -107,7 +107,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'gandocam', 'webmaster@gandocam.com.ve', '$2y$10$LKX95bIKlAbtUgeqErsgvuhHRkrxTeOyD90QEsXWBfPZ/bYpWn4tW', 'EVMbu5t0z4SeCCYksFHLM8LNI6fi9doix49tVHn8shp4tmXFdX5nGMz0ZfG9', '2017-01-29 00:33:49', '2017-01-29 00:33:49');
+(1, 'gandocam', 'admin@gandocam.com.ve', '$2y$10$LKX95bIKlAbtUgeqErsgvuhHRkrxTeOyD90QEsXWBfPZ/bYpWn4tW', 'G3NBbNBiviIaawFZNwY6mPUZq7paZw8C0WjTHllB7FyCVETQbpyGQcA77xMG', '2017-01-29 00:33:49', '2017-01-29 00:33:49');
 
 -- --------------------------------------------------------
 
