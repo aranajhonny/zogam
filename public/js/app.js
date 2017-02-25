@@ -1848,9 +1848,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = {
-    mounted: function mounted() {
-        console.log('Component mounted.');
+    methods: {
+        buscar: function buscar() {
+            console.log('get');
+        }
     }
+
 };
 
 /***/ }),
@@ -19087,8 +19090,6 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container superior"
   }, [_c('div', {
@@ -19097,9 +19098,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "col-md-6 col-md-offset-3 "
   }, [_c('div', {
     staticClass: "panel panel-info"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Mi Vehículo "), _c('span')]), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
   }, [_c('p', [_vm._v("Introduzca la Matricula del Vehículo")]), _vm._v(" "), _c('div', {
     staticClass: "input-group"
@@ -19116,12 +19115,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('button', {
     staticClass: "btn btn-default",
     attrs: {
-      "type": "button",
-      "onclick": "javascript:buscar()"
+      "type": "button"
+    },
+    on: {
+      "click": _vm.buscar
     }
   }, [_c('span', {
     staticClass: "fa fa-search"
   }), _vm._v(" Buscar!")])])])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("Mi Vehículo "), _c('span')])
 }]}
 module.exports.render._withStripped = true
 if (false) {

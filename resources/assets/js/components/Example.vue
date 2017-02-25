@@ -11,7 +11,7 @@
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Introduzca la matricula..." id="placa" onkeyup="this.value=this.value.toUpperCase()">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" onclick="javascript:buscar()"><span class="fa fa-search"></span> Buscar!</button>
+							<button class="btn btn-default" type="button" v-on:click="buscar"><span class="fa fa-search"></span> Buscar!</button>
 						</span>
 					</div>
 				</div>
@@ -23,8 +23,11 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        methods: {
+            buscar() {
+                console.log('get')
+            }
         }
+
     }
 </script>
