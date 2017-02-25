@@ -16,6 +16,15 @@ npm install or yarn
 php artisan migrate
 
 ```
+### Build or run the frontend
+```
+// to build
+yarn run Build
+
+// to run dev mode
+yarn run watch
+
+```
 After install make sure to set mysql environment variables in your .env file.
 
 ```
