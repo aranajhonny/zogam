@@ -15,6 +15,11 @@
   height: 2px;
 }
 
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
 /* Fancy blur effect */
 #nprogress .peg {
   display: block;
