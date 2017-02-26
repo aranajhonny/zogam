@@ -12,6 +12,7 @@ const { mix } = require('laravel-mix');
  */
 mix.combine([
         'public/js/alert.js',
+        'public/js/zoom.min.js',        
         'public/js/jquery.goup.js',
         'public/js/bootstrap.min.js'
  	], 'public/js/all.js')
@@ -30,5 +31,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
      	'public/css/vendor/bootstrap.min.css',
         'public/css/nprogress.css',
         'public/css/alert.css',
+        'public/css/zoom.css',
      	'public/css/vendor/font-awesome.min.css',
  	], 'public/css/all.css');

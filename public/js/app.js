@@ -29244,14 +29244,16 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', _vm._l((_vm.fotos), function(foto) {
-    return _c('div', [_c('div', {
-      staticClass: "row panel-nuevo ",
-      attrs: {
-        "id": "panel-rev"
-      }
-    }, [_c('div', {
-      staticClass: "col-md-12 "
+  return _c('div', [_c('div', [_c('div', {
+    staticClass: "row panel-nuevo ",
+    attrs: {
+      "id": "panel-rev"
+    }
+  }, [_c('div', {
+    staticClass: "col-md-12 "
+  }, _vm._l((_vm.fotos), function(foto) {
+    return (foto.length > 0) ? _c('div', {
+      staticClass: "fotos"
     }, [_c('div', {
       staticClass: "panel panel-info"
     }, [_c('div', {
@@ -29259,23 +29261,26 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "id": "head-rev"
       }
-    }), _vm._v(" "), _c('div', {
+    }, [_c('span', [_vm._v(_vm._s(foto[0].tipo.toUpperCase()) + " / " + _vm._s(foto[0].fecha))])]), _vm._v(" "), _c('div', {
       staticClass: "panel-body panel-rev"
-    }, [(foto.tipo == 'desarmado') ? _c('div', {
-      staticClass: "fotos"
-    }, [_c('div', {
-      staticClass: "col-md-4"
-    }, [_c('div', {
-      staticClass: "thumbnail"
-    }, [_c('img', {
-      staticStyle: {
-        "width": "300px"
-      },
-      attrs: {
-        "src": 'images/' + foto.nombre
-      }
-    })])])]) : _vm._e()])])])])])
-  }))
+    }, _vm._l((foto), function(fot) {
+      return _c('div', {
+        staticClass: "fotos"
+      }, [_c('div', {
+        staticClass: "col-md-4"
+      }, [_c('div', {
+        staticClass: "thumbnail"
+      }, [_c('img', {
+        staticStyle: {
+          "width": "300px"
+        },
+        attrs: {
+          "src": 'images/' + fot.nombre,
+          "data-action": "zoom"
+        }
+      })])])])
+    }))])]) : _vm._e()
+  }))])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -29376,13 +29381,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1) : _vm._e(), _vm._v(" "), (_vm.show) ? _c('div', {
     staticClass: "vehiculo"
-  }, _vm._l((_vm.Items), function(fotos) {
-    return _c('Fotos', {
-      attrs: {
-        "fotos": fotos
-      }
-    })
-  })) : _vm._e()])
+  }, [_c('Fotos', {
+    attrs: {
+      "fotos": _vm.Items
+    }
+  })], 1) : _vm._e()])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "panel-heading"

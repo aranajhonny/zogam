@@ -22,7 +22,7 @@
 		<Vehiculo :auto="Vehiculo"></Vehiculo>
 	</div>
 	<div class="vehiculo" v-if="show">
-		<Fotos v-for="fotos in Items" :fotos="fotos"></Fotos>
+		<Fotos :fotos="Items"></Fotos>
 	</div>
     </div>
 </template>

@@ -47,6 +47,9 @@ class UploadController extends Controller
               ON i.image_id = images.id 
               WHERE revision_id = :id', ['id' => $value->id]);
         foreach ($images as $image){
+          if ($image->tipo == 'recepcion') {
+            array_push($recepcion,$image);
+          }
           if ($image->tipo == 'desarmado') {
             array_push($desarmado,$image);
           }
@@ -64,9 +67,6 @@ class UploadController extends Controller
           }
           elseif ($image->tipo == 'limpieza') {
             array_push($limpieza,$image); 
-          }
-          elseif ($image->tipo == 'recepcion') {
-            array_push($recepcion,$image);
           }
         }
         $array = array('desarmado'=>$desarmado,'latoneria'=>$latoneria,'pintura'=>$pintura,'preparacion'=>$preparacion,'pulitura'=>$pulitura,'limpieza'=>$limpieza,'recepcion'=>$recepcion);      
