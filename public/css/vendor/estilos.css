@@ -9,6 +9,8 @@ body{
 }
 .li-nav {
   margin-top: 17px;
+  margin-bottom: 15px;
+
 }
 .has-error{
   height: 105px;
