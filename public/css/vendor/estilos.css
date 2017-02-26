@@ -3,6 +3,10 @@ body{
   font-family: 'Roboto', Helvetica;
 
 }
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: none;
+}
 .li-nav {
   margin-top: 17px;
 }
