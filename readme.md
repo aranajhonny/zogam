@@ -11,7 +11,7 @@ Before
 ```
 composer install 
 
-npm install or yarn 
+`npm install`
 
 php artisan migrate
 
@@ -19,10 +19,13 @@ php artisan migrate
 ### Build or run the frontend
 ```
 // to build
-yarn run Build
+`npm run build`
 
 // to run dev mode
-yarn run watch
+`npm run watch`
+
+// Before run the app or edit.
+// run `npm run build`
 
 ```
 After install make sure to set mysql environment variables in your .env file.
