@@ -10,14 +10,25 @@ const { mix } = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.combine([
+        'public/js/alert.js',
+        'public/js/jquery.goup.js',
+        'public/js/bootstrap.min.js'
+ 	], 'public/js/all.js')
+     .minify('public/js/all.js')
+
 mix.js('resources/assets/js/app.js', 'public/js')
-// mix.combine([
-// 	'public/js/vendor/jquery.js',
-// 	'public/js/vendor/bootstrap.min.js'
-// 	], 'public/js/all.js')
-// 	.minify('public/js/all.js')
+   .extract([
+        'vue',
+        'nprogress',
+        'unfetch'
+    ])
+ 	.minify('public/js/app.js')
+    .minify('public/js/vendor.js')
 	
-//    	.combine([
-//     	'public/css/vendor/bootstrap.min.css',
-//     	'public/css/vendor/font-awesome.min.css',
-// 	], 'public/css/all.css');
+   	.combine([
+     	'public/css/vendor/bootstrap.min.css',
+        'public/css/nprogress.css',
+        'public/css/alert.css',
+     	'public/css/vendor/font-awesome.min.css',
+ 	], 'public/css/all.css');

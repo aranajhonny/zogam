@@ -12,20 +12,13 @@
 
   <!-- Styles -->
   <link href="{{asset('css/all.css')}} " rel="stylesheet">
-  <link href="{{asset('fileinput/css/fileinput.min.css')}} " media="all" rel="stylesheet" type="text/css" />
-
   <link href="{{asset('css/vendor/estilos.css')}}" rel="stylesheet">
-
-  <link rel="stylesheet" href="{{asset('css/alert.css')}}" >
-  <link rel="stylesheet" href="{{asset('css/nprogress.css')}}" >
-
-  <script  src="{{asset('js/vendor/jquery.js')}} "></script>
-  <script  src="{{asset('js/all.js')}} "></script>
-  <script  src="{{asset('fileinput/js/fileinput.js')}} " type="text/javascript"></script>
-  <script  src="{{asset('fileinput/js/locales/es.js')}} " type="text/javascript"></script>
-  <script  src="{{asset('js/alert.js')}} " type="text/javascript"></script>
-  <script  src="{{asset('js/nprogress.js')}} " type="text/javascript"></script>
-  <script  src="{{asset('js/jquery.goup.js')}} " type="text/javascript"></script>  
+ <!-- Script -->
+  <script src="{{asset('js/manifest.js')}} "></script>
+  <script  src="{{asset('js/vendor.js')}} "></script>    
+  <script  src="{{asset('js/jquery.js')}} "></script>    
+  <script  src="{{asset('js/all.js')}} " type="text/javascript"></script>  
+   <!-- CSRF Token -->
   <script>
     window.Laravel = {!! json_encode([
       'csrfToken' => csrf_token(),
@@ -103,7 +96,7 @@ jQuery.goup();
             </div>
        </div>
     </nav>
-    <example></example>    
+    <buscar></buscar>    
   </div>
   <script  src="{{asset('js/app.js')}} "></script>
 </body>
