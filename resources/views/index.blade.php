@@ -25,6 +25,7 @@
   <script  src="{{asset('fileinput/js/locales/es.js')}} " type="text/javascript"></script>
   <script  src="{{asset('js/alert.js')}} " type="text/javascript"></script>
   <script  src="{{asset('js/nprogress.js')}} " type="text/javascript"></script>
+  <script  src="{{asset('js/jquery.goup.js')}} " type="text/javascript"></script>  
   
   <script src=""></script>
   <script>
@@ -32,6 +33,11 @@
       'csrfToken' => csrf_token(),
       ]) !!};
     </script>
+<script>
+jQuery(document).ready(function(){
+jQuery.goup();
+});
+</script>    
   </head>
   <body>
     <div id="app">
@@ -154,7 +160,7 @@ function buscar() {
       swal('El vehiculo no esta registrado');
     }
     $('.buscar-panel').hide();
-    $('.superior').append('\n    <a href="{{ url('/auto') }}" style="float:left; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  LISTADO</span></a><br><br>\n    <div class="col-md-8 col-md-offset-2">\n      <div class="panel panel-info">\n        <div class="panel-heading">/ Datos del vehiculo</div>\n        <div class="panel-body">\n          <div class="row">\n            <div class="col-md-6"><p><strong>Placa:</strong> ' + data.auto.placa + '</p></div>\n            <div class="col-md-6"><p><strong>Due\xF1o:</strong> ' + data.auto.propietario + '</p></div>\n            <div class="col-md-6"><p><strong>Marca:</strong> ' + data.auto.marca + '</p></div>\n            <div class="col-md-6"><p><strong>Modelo:</strong> ' + data.auto.placa + '</p></div>\n          </div>\n        </div>\n      </div>\n    </div>\n');
+    $('.superior').append('\n    <a href="{{ url('/auto') }}" style="float:left; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg"> Regresar</span></a><br><br>\n    <div class="col-md-8 col-md-offset-2">\n      <div class="panel panel-info">\n        <div class="panel-heading">/ Datos del vehiculo</div>\n        <div class="panel-body">\n          <div class="row">\n            <div class="col-md-6"><p><strong>Placa:</strong> ' + data.auto.placa + '</p></div>\n            <div class="col-md-6"><p><strong>Due\xF1o:</strong> ' + data.auto.propietario + '</p></div>\n            <div class="col-md-6"><p><strong>Marca:</strong> ' + data.auto.marca + '</p></div>\n            <div class="col-md-6"><p><strong>Modelo:</strong> ' + data.auto.placa + '</p></div>\n          </div>\n        </div>\n      </div>\n    </div>\n');
     $.each(data.data, function (index, image) {
       if (image.tipo == 'recepcion') {
         $('#panel-rev').removeClass('hidden');
