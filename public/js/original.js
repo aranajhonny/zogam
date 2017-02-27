@@ -15,7 +15,7 @@ var template = `
         <div class="panel-heading " id="head-des"></div>
         <div class="panel-body panel-des">
 
-        </div>
+        </div> 
       </div>
     </div>
   </div>

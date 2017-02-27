@@ -35,7 +35,9 @@ class UploadController extends Controller
       $results = DB::select('SELECT id  FROM revisions WHERE vehiculo_id  = :id', ['id' => $auto->id]);
 
       $array = array();
-      foreach ($results as $value) {
+      $desarmado = array();$latoneria= array();$pintura = array();$preparacion = array();$pulitura = array();$limpieza= array();$recepcion = array();
+     
+       foreach ($results as $value) {
         $images = DB::select('
               SELECT i.image_id, r.tipo,r.fecha, images.nombre 
               FROM image_revs as i 
@@ -44,7 +46,30 @@ class UploadController extends Controller
               INNER JOIN images 
               ON i.image_id = images.id 
               WHERE revision_id = :id', ['id' => $value->id]);
-        $array = array_merge($array, $images);
+        foreach ($images as $image){
+          if ($image->tipo == 'recepcion') {
+            array_push($recepcion,$image);
+          }
+          if ($image->tipo == 'desarmado') {
+            array_push($desarmado,$image);
+          }
+          elseif ($image->tipo == 'latoneria') {
+            array_push($latoneria,$image);
+          }
+          elseif ($image->tipo == 'pintura') {
+            array_push($pintura,$image);
+          }
+          elseif ($image->tipo == 'preparacion') {
+            array_push($preparacion, $image);
+          }
+          elseif ($image->tipo == 'pulitura') {
+            array_push($pulitura,$image);
+          }
+          elseif ($image->tipo == 'limpieza') {
+            array_push($limpieza,$image); 
+          }
+        }
+        $array = array('desarmado'=>$desarmado,'latoneria'=>$latoneria,'pintura'=>$pintura,'preparacion'=>$preparacion,'pulitura'=>$pulitura,'limpieza'=>$limpieza,'recepcion'=>$recepcion);      
       }
 
         // SELECT id FROM revisions WHERE vehiculo_id = 1

@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{asset('css/alert.css')}}" >
   <link rel="stylesheet" href="{{asset('css/nprogress.css')}}" >
 
-  <script  src="{{asset('js/vendor/jquery.js')}} "></script>
+  <script  src="{{asset('js/jquery.js')}} "></script>
   <script  src="{{asset('js/all.js')}} "></script>
   <script  src="{{asset('fileinput/js/fileinput.js')}} " type="text/javascript"></script>
   <script  src="{{asset('fileinput/js/locales/es.js')}} " type="text/javascript"></script>
