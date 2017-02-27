@@ -69,7 +69,7 @@ class UploadController extends Controller
             array_push($limpieza,$image); 
           }
         }
-        $array = array('desarmado'=>$desarmado,'latoneria'=>$latoneria,'pintura'=>$pintura,'preparacion'=>$preparacion,'pulitura'=>$pulitura,'limpieza'=>$limpieza,'recepcion'=>$recepcion);      
+        $array = array('recepcion'=>$recepcion,'desarmado'=>$desarmado,'latoneria'=>$latoneria,'pintura'=>$pintura,'preparacion'=>$preparacion,'pulitura'=>$pulitura,'limpieza'=>$limpieza);      
       }
 
         // SELECT id FROM revisions WHERE vehiculo_id = 1
