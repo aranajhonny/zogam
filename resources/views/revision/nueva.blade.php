@@ -58,8 +58,7 @@
           <br>
           <br>
               <button class="btn btn-success" type="submit"><span class="fa fa-send"></span> Guardar</button>
-              <button class="btn btn-warning" onclick="javascript: window.history.back()"><span class="fa fa-arrow-left"></span> Volver</button>
-
+              <a href="{{ url('/home')}}" class="btn btn-warning" ><span class="fa fa-arrow-left"></span> Volver</a>
             <br>
           <br>
           </div>
