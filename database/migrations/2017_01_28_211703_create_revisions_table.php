@@ -20,7 +20,7 @@ class CreateRevisionsTable extends Migration
             $table->date('fecha');
             $table->timestamps();
 
-            $table->foreign('vehiculo_id')->references('id')->on('vehiculos');
+            $table->foreign('vehiculo_id')->references('id')->on('vehiculos')->onDelete('cascade');
         });
     }
 

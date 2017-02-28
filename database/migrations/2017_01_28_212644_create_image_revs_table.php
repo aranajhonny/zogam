@@ -17,8 +17,8 @@ class CreateImageRevsTable extends Migration
             $table->integer('image_id', 10)->unsigned();
             $table->integer('revision_id', 10)->unsigned();
 
-            $table->foreign('image_id')->references('id')->on('images');
-            $table->foreign('revision_id')->references('id')->on('revisions');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
+            $table->foreign('revision_id')->references('id')->on('revisions')->onDelete('cascade');
         });
     }
 
