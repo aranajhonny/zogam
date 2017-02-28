@@ -18,7 +18,7 @@ class CreateVehiculosTable extends Migration
             $table->string('placa')->unique();
             $table->string('marca');
             $table->string('modelo');
-            $table->integer('anio');
+            $table->integer('anio', 11);
             $table->string('serial_motor');
             $table->string('serial_carro');
             $table->string('color');
@@ -26,6 +26,7 @@ class CreateVehiculosTable extends Migration
             $table->string('propietario');
             $table->string('telf_prop');
             $table->string('email_prop');
+            $table->text('status');
             $table->timestamps();
         });
     }
