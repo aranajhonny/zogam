@@ -14,8 +14,8 @@ class CreateImageRevsTable extends Migration
     public function up()
     {
         Schema::create('image_revs', function (Blueprint $table) {
-            $table->integer('image_id', 10)->unsigned();
-            $table->integer('revision_id', 10)->unsigned();
+            $table->integer('image_id')->unsigned();
+            $table->integer('revision_id')->unsigned();
 
             $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->foreign('revision_id')->references('id')->on('revisions')->onDelete('cascade');
