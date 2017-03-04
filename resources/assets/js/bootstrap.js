@@ -8,7 +8,12 @@ window._ = require('lodash');
  */
 
 //window.$ = window.jQuery = require('jquery');
+import Promise from 'promise-polyfill'; 
 
+// To add to window
+if (!window.Promise) {
+  window.Promise = Promise;
+}
 //require('bootstrap-sass');
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0",
+    "promise-polyfill": "^6.0.2",
     "unfetch": "^2.1.0"
   }
 }
