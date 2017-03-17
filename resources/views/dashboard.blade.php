@@ -3,6 +3,14 @@
 @section('content')
 <div class="container">
   <div class="row">
+        @if(Session::get('message'))
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h5> {{ Session::get('message') }}</h5>
+        </div>
+    </div>
+    @endif
   <div class="col-md-12">
     <div class="text-right nuevo-veh">
       <a href="{{ url('/vehiculo/create') }}" class="btn btn-info"><span class="fa fa-truck"> NUEVO VEHICULO</span></a>

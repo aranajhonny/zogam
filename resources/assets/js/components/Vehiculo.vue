@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="auto" style="float:left; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  REGRESAR</span></a><br><br>
+        <a href="auto" style="float:right; color:teal;" class="btn btn-default"><span class="fa fa-mail-reply-all fa-lg">  Regresar</span></a><br><br>
 <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-info">
         <div class="panel-heading">/ Datos del vehiculo</div>

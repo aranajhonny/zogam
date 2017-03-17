@@ -75,7 +75,7 @@ class VehiculoController extends Controller
       $vehiculo->status = 'Ninguno';
       $vehiculo->save();
 
-      return redirect('vehiculo/create')->with('message','Ha sido guardado exitosamente!');
+      return redirect('home')->with('message','El vehiculo ha sido guardado exitosamente!');
     }
 
 

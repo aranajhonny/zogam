@@ -9,9 +9,9 @@
 					<p>Introduzca la Matricula del Vehículo</p>
 
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Introduzca la matricula..." id="placa" onkeyup="this.value=this.value.toUpperCase()">
+						<input type="text" class="form-control" placeholder="ABCD123 (Ejemplo)" id="placa" onkeyup="this.value=this.value.toUpperCase()">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" v-on:click="buscar"><span class="fa fa-search"></span> Buscar!</button>
+							<button class="btn btn-default" type="button" v-on:click="buscar"><span class="fa fa-search"></span> Buscar</button>
 						</span>
 					</div>
 				</div>

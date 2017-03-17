@@ -2,7 +2,7 @@
 @section('content')
 <form enctype="multipart/form-data" action="{{ url('/upload')}}" method="post">
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-<div class="container-fluid">
+<div class="container">
     @if(Session::get('message'))
     <div class="col-md-8 col-md-offset-2">
         <div class="alert alert-success alert-dismissable">
@@ -13,6 +13,7 @@
     @endif
   <h2></h2>    
   <div class="row">
+  <div class="btn btn-default btn-teal btn-responsive" style="float:right"><a href="{{ url('/home') }}" style="color:teal"><span class="fa fa-mail-reply-all fa-lg"> Regresar</span></a></div><br><br>    
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-info">
         <div class="panel-heading">/ Datos del vehiculo</div>
@@ -20,7 +21,7 @@
           <div class="row">
           <input type="hidden" value="{{ strtoupper($auto->id) }}" name="_idAuto">
             <div class="col-md-6"><p><strong>Placa:</strong> {{ strtoupper($auto->placa) }}</p></div>
-            <div class="col-md-6"><p><strong>Dueño:</strong> {{ strtoupper($auto->propietario) }}</p></div>
+            <div class="col-md-6"><p><strong>Propietario:</strong> {{ strtoupper($auto->propietario) }}</p></div>
             <div class="col-md-6"><p><strong>Marca:</strong> {{ strtoupper($auto->marca) }}</p></div>
             <div class="col-md-6"><p><strong>Modelo:</strong> {{ strtoupper($auto->modelo) }}</p></div>
           </div>
@@ -57,8 +58,7 @@
           <div class="col-md-12 text-center">
           <br>
           <br>
-              <button class="btn btn-success" type="submit"><span class="fa fa-send"></span> Guardar</button>
-              <a href="{{ url('/home')}}" class="btn btn-warning" ><span class="fa fa-arrow-left"></span> Volver</a>
+              <button class="btn btn-success" type="submit"><span class="fa fa-save"></span> Guardar</button>
             <br>
           <br>
           </div>

@@ -19,7 +19,7 @@
         </div>
     </div>
     @endif 
-    <div class="btn btn-default btn-teal btn-responsive" style="float:left"><a href="{{ url('/home') }}" style="color:teal"><span class="fa fa-mail-reply-all fa-lg"> Listado</span></a></div><br><br>    
+    <div class="btn btn-default btn-teal btn-responsive" style="float:right"><a href="{{ url('/home') }}" style="color:teal"><span class="fa fa-mail-reply-all fa-lg"> Regresar</span></a></div><br><br>    
     <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-info">
     <div class="panel-heading"><center> Editar Vehículo</center> </div>
