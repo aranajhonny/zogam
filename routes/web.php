@@ -10,7 +10,7 @@ Route::get('/auto', function(){
 
 Route::resource('vehiculo', 'VehiculoController');
 
-Route::get('/{placa}', 'VehiculoController@show');
+Route::get('/{placa}', 'UploadController@show');
 
 Route::resource('images', 'ImagesController');
 

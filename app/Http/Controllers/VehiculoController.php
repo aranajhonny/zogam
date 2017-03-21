@@ -22,7 +22,7 @@ class VehiculoController extends Controller
      */
     public function __construct()
     {
-      $this->middleware('auth');
+     $this->middleware('auth');
     }
 
     /**
@@ -133,62 +133,6 @@ class VehiculoController extends Controller
       //redirect page after save data
       return redirect('vehiculo/'.$id.'/edit')->with('message','Ha sido actualizado exitosamente!');
     }
-
-    public function show(Request $request, $placa)
-    {
-      $auto = Vehiculo::where('placa', $placa)->first();
-
-      if (!$auto) {
-        $msj = array('status' => 'error');
-        return $msj;
-      }
-
-      $results = DB::select('SELECT id  FROM revisions WHERE vehiculo_id  = :id', ['id' => $auto->id]);
-
-      $array = array();
-      $desarmado = array();$latoneria= array();$pintura = array();$preparacion = array();$pulitura = array();$limpieza= array();$recepcion = array();
-     
-       foreach ($results as $value) {
-        $images = DB::select('
-              SELECT i.image_id, r.tipo,r.fecha, images.nombre 
-              FROM image_revs as i 
-              inner JOIN revisions as r 
-              ON i.revision_id = r.id 
-              INNER JOIN images 
-              ON i.image_id = images.id 
-              WHERE revision_id = :id', ['id' => $value->id]);
-        foreach ($images as $image){
-          if ($image->tipo == 'recepcion') {
-            array_push($recepcion,$image);
-          }
-          if ($image->tipo == 'desarmado') {
-            array_push($desarmado,$image);
-          }
-          elseif ($image->tipo == 'latoneria') {
-            array_push($latoneria,$image);
-          }
-          elseif ($image->tipo == 'pintura') {
-            array_push($pintura,$image);
-          }
-          elseif ($image->tipo == 'preparacion') {
-            array_push($preparacion, $image);
-          }
-          elseif ($image->tipo == 'pulitura') {
-            array_push($pulitura,$image);
-          }
-          elseif ($image->tipo == 'limpieza') {
-            array_push($limpieza,$image); 
-          }
-        }
-        $array = array('recepcion'=>$recepcion,'desarmado'=>$desarmado,'latoneria'=>$latoneria,'pintura'=>$pintura,'preparacion'=>$preparacion,'pulitura'=>$pulitura,'limpieza'=>$limpieza);      
-    }
-    // if (!$array) {
-    //   $msj = array('status' => 'error');
-    //   return $msj;
-    // }
-    return view('vehiculos.buscar', ['data' => $array, 'auto' => $auto]);
-
-  }
 
     public function destroy(Vehiculo $vehiculo)
     {
