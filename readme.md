@@ -1,6 +1,8 @@
 
 # Zogam - [ WIP ]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aranajhonny/zogam.svg?token=48ef0408d06693e3e356a8e5a593ed852075766083d2fe17933cf9e9343fb0e9)](https://greenkeeper.io/)
+
 ERP and CRM
 
 ## Installation
